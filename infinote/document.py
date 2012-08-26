@@ -15,7 +15,7 @@ class InfinoteDocument(object):
         self._state = State()
 
         if initial_text is not None:
-            self.try_insert([1, '', 0, str(initial_text)])
+            self.insert([1, '', 0, str(initial_text)])
 
     def insert(self, params):
         '''
