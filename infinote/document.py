@@ -17,7 +17,7 @@ class InfinoteDocument(object):
         if initial_text is not None:
             self.try_insert([1, '', 0, str(initial_text)])
 
-    def try_insert(self, params):
+    def insert(self, params):
         '''
         try to perform an insert operation and add the operation to the log
         :param list params: [user, vector, position, text]
@@ -30,7 +30,7 @@ class InfinoteDocument(object):
             self._state.execute(request)
             self.log.append(["i", tuple(params)])
 
-    def try_delete(self, params):
+    def delete(self, params):
         '''
         try to perform a delete operation and add the operation to the log
         :param list params: [user, vector, position, text_length]
@@ -41,7 +41,7 @@ class InfinoteDocument(object):
             self._state.execute(request)
             self.log.append(["d", tuple(params)])
 
-    def try_undo(self, params):
+    def undo(self, params):
         '''
         try to perform an undo operation and add the operation to the log
         :param list params: [user]
