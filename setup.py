@@ -14,7 +14,7 @@ setup(
     long_description=(read('README.rst')),
     author="Jeroen van Veen",
     author_email="j.veenvan@gmail.com",
-    url="https://github.com/phrearch/py-infinote",
+    url="https://github.com/jvanveen/py-infinote",
     license="BSD",
     classifiers=[
         "Development Status :: 4 - Beta",
